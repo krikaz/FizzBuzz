@@ -1,6 +1,8 @@
 {
-  "dependencies": {
-    "express": "^4.17.1",
-    "knex": "^0.19.1"
-  }
+	"name": "fizzbuzz",
+	"version": "1.0.0",
+	"main": "index.js",
+	"dependencies": {
+		"express": "^4.17.1"
+	}
 }

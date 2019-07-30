@@ -18,10 +18,13 @@ function fizzbuzz(body) {
 	return result;
 }
 
-router.post('/', async (req, res) => {
-	fizzbuzz(req.body)
-		.then(result => {
-			res.status(200).json(result);
-		})
-		.catch(error => res.status(500).send(error));
+router.post('/', (req, res) => {
+	try {
+		const result = fizzbuzz(req.body);
+		res.status(200).json(result);
+	} catch (error) {
+		res.status(500).send(error);
+	}
 });
+
+module.exports = router;
